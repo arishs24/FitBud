@@ -1,0 +1,17 @@
+2025-01-11 17:20:55,677 - __main__ - INFO - Starting Flask application...
+2025-01-11 17:20:55,735 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://172.18.77.157:5000
+2025-01-11 17:20:55,736 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-01-11 17:20:55,738 - werkzeug - INFO -  * Restarting with stat
+2025-01-11 17:20:56,081 - __main__ - INFO - Starting Flask application...
+2025-01-11 17:20:56,119 - werkzeug - WARNING -  * Debugger is active!
+2025-01-11 17:20:56,125 - werkzeug - INFO -  * Debugger PIN: 741-191-406
+2025-01-11 17:21:08,709 - werkzeug - INFO - 127.0.0.1 - - [11/Jan/2025 17:21:08] "GET / HTTP/1.1" 200 -
+2025-01-11 17:21:08,861 - werkzeug - INFO - 127.0.0.1 - - [11/Jan/2025 17:21:08] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-01-11 17:43:20,270 - werkzeug - INFO -  * Detected change in 'C:\\Users\\ssurk\\Documents\\Coding Project\\delta2\\backend\\functions\\parsing.py', reloading
+2025-01-11 17:43:20,346 - werkzeug - INFO -  * Restarting with stat
+2025-01-11 17:43:20,798 - __main__ - INFO - Starting Flask application...
+2025-01-11 17:43:20,840 - werkzeug - WARNING -  * Debugger is active!
+2025-01-11 17:43:20,847 - werkzeug - INFO -  * Debugger PIN: 741-191-406
