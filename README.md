@@ -10,15 +10,14 @@ First thing you want to do is enter the path you want to run this project in you
 
 Simply cd
 
-### `create a new virtual environment`,
+### `Elevator pitch`,
 
-Create it by typing 'python -m venv name_of_environment'
+KEEP IT SHORT
 Then start environment by typing './name_of_environment/scripts/activate'
 
-### `pip install -r requirements.txt`
+### `About the project`
 
-Install necessary packages as well as other packages:
-- 'pip install bs4'
+Talk quite a bit here. ~800 words
 
 ### Generate json key from Firebase and store it in frontend directory
 
