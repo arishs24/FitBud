@@ -1,10 +1,15 @@
 import time
 from collections import deque
 import serial
+import joblib  # For loading a pre-trained ML model
+import pandas as pd
 
 # Initialize serial connection
 ser = serial.Serial('COM3', 9600, timeout=1)
 time.sleep(2)
+
+# Load the trained ML model
+model = joblib.load('trained_model.pkl')  # Replace with your actual model file
 
 # Calibration variables
 calibration_mode = True
@@ -28,28 +33,6 @@ def smooth_data(new_x, new_y, new_z):
     smoothed_z = sum(z_values) / len(z_values)
     return smoothed_x, smoothed_y, smoothed_z
 
-# Speed detection variables
-prev_x, prev_y, prev_z = None, None, None
-dynamic_speed_threshold = 0.5  # Default threshold
-
-def adjust_speed_threshold():
-    """Dynamically adjust speed threshold based on calibrated range."""
-    global dynamic_speed_threshold
-    dynamic_speed_threshold = (x_max - x_min + y_max - y_min + z_max - z_min) / 20  # Increase divisor for larger margin
-    print(f"Adjusted speed threshold: {dynamic_speed_threshold:.3f}")
-
-def check_motion_speed(x, y, z):
-    """Check the speed of motion and detect overly fast movements."""
-    global prev_x, prev_y, prev_z
-    if prev_x is not None:
-        speed_x = abs(x - prev_x)
-        speed_y = abs(y - prev_y)
-        speed_z = abs(z - prev_z)
-        # Use a larger margin for speed thresholds
-        if speed_x > dynamic_speed_threshold * 1.5 or speed_y > dynamic_speed_threshold * 1.5 or speed_z > dynamic_speed_threshold * 1.5:
-            print("Too fast! Adjust your speed.")
-    prev_x, prev_y, prev_z = x, y, z
-
 def read_sensor_data():
     """Read and parse accelerometer data from serial."""
     ser.write(b'R\n')
@@ -67,15 +50,14 @@ def read_sensor_data():
         return None, None, None
 
 def calibrate():
-    """Calibrate the accelerometer by finding min/max values for X, Y, Z."""
-    global calibration_mode, calibration_start_time
+    """Calibrate the accelerometer for bicep curls."""
     global x_min, x_max, y_min, y_max, z_min, z_max
-    print("Starting Calibration Mode. Perform one repetition...")
-
+    print("Starting Calibration Mode. Perform a few bicep curls...")
+    
     calibration_start_time = time.time()
     calibration_data = {"x": [], "y": [], "z": []}
-
-    while calibration_mode:
+    
+    while time.time() - calibration_start_time < calibration_timeout:
         x, y, z = read_sensor_data()
         if x is None or y is None or z is None:
             continue
@@ -83,52 +65,60 @@ def calibrate():
         calibration_data["y"].append(y)
         calibration_data["z"].append(z)
         print(f"Calibrating... X: {x:.3f}, Y: {y:.3f}, Z: {z:.3f}")
-        if time.time() - calibration_start_time > calibration_timeout:
-            print("Calibration timeout reached.")
-            calibration_mode = False
 
+    # Determine calibration bounds
     x_min, x_max = min(calibration_data["x"]), max(calibration_data["x"])
     y_min, y_max = min(calibration_data["y"]), max(calibration_data["y"])
     z_min, z_max = min(calibration_data["z"]), max(calibration_data["z"])
+    
     print("Calibration Complete!")
     print(f"X Min: {x_min:.3f}, X Max: {x_max:.3f}")
     print(f"Y Min: {y_min:.3f}, Y Max: {y_max:.3f}")
     print(f"Z Min: {z_min:.3f}, Z Max: {z_max:.3f}")
 
-    adjust_speed_threshold()
+def classify_motion(x, y, z):
+    """Classify the activity using the ML model."""
+    try:
+        # Prepare the data with feature names as a pandas DataFrame
+        input_data = pd.DataFrame([[x, y, z]], columns=["x", "y", "z"])
+        
+        # Use the model to make a prediction
+        prediction = model.predict(input_data)[0]
+        return prediction
+    except Exception as e:
+        print(f"Error in ML classification: {e}")
+        return None
 
 def monitor():
-    """Monitor accelerometer readings and check for improper motion."""
+    """Monitor accelerometer readings and classify activities."""
     print("Starting Monitoring Mode...")
     while True:
         x, y, z = read_sensor_data()
         if x is None or y is None or z is None:
             continue
 
-        # Check for improper motion with realistic feedback
-        if x < x_min:
-            print("Motion too far left!")
-        elif x > x_max:
-            print("Motion too far right!")
-        elif y < y_min:
-            print("Motion too low!")
-        elif y > y_max:
-            print("Motion too high!")
-        elif z < z_min:
-            print("Motion not forward enough!")
-        elif z > z_max:
-            print("Motion too far forward!")
+        # Classify the motion
+        activity = classify_motion(x, y, z)
+        
+        if activity == "bicep_curl":
+            # Check if the motion is within the calibrated range
+            if not (x_min <= x <= x_max):
+                print("Incorrect form: Too far to the right, stay within range!")
+            elif not (y_min <= y <= y_max):
+                print("Incorrect form: Too Low!")
+            elif not (z_min <= z <= z_max):
+                print("Incorrect form: Fix Alignment")
+            else:
+                print("Good form! Bicep curl detected.")
         else:
-            print("Good form!")
+            print(f"Detected Activity: {activity}")
 
-        # Check for speed
-        check_motion_speed(x, y, z)
         time.sleep(0.1)
 
 if __name__ == "__main__":
     try:
-        calibrate()
-        monitor()
+        calibrate()  # Perform calibration first
+        monitor()  # Start monitoring after calibration
     except KeyboardInterrupt:
         print("Exiting...")
     finally:

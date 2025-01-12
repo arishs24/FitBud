@@ -1,26 +1,25 @@
 import pandas as pd
-from sklearn.model_selection import train_test_split
 from sklearn.ensemble import RandomForestClassifier
-from sklearn.metrics import classification_report
+from sklearn.model_selection import train_test_split
+from sklearn.metrics import accuracy_score
 import joblib
 
-# Load dataset
-data = pd.read_csv("workout_data.csv")
+# Load the dataset
+data = pd.read_csv('workout_data.csv')  # Ensure the dataset is in the same directory
+X = data[['x', 'y', 'z']]  # Features: accelerometer data
+y = data['label']          # Labels: workout types
 
-# Separate features and labels
-X = data[['x', 'y', 'z']]
-y = data['label']
-
-# Split into training and testing data
+# Train-test split
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
-# Train a Random Forest Classifier
-model = RandomForestClassifier(n_estimators=100, random_state=42)
+# Train the model
+model = RandomForestClassifier()
 model.fit(X_train, y_train)
 
 # Evaluate the model
-y_pred = model.predict(X_test)
-print(classification_report(y_test, y_pred))
+predictions = model.predict(X_test)
+print("Accuracy:", accuracy_score(y_test, predictions))
 
-# Save the trained model
-joblib.dump(model, "workout_model.pkl")
+# Save the trained model to a file
+joblib.dump(model, 'trained_model.pkl')
+print("Model saved as 'trained_model.pkl'")
