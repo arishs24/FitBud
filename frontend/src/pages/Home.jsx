@@ -1,14 +1,15 @@
 import React, { useEffect, useState } from 'react';
 import io from 'socket.io-client';
-import Header from '../components/Header';
 
 function Home() {
   const [socket, setSocket] = useState(null);
   const [sensorData, setSensorData] = useState(null);
   const [calibrationData, setCalibrationData] = useState(null);
   const [isCalibrating, setIsCalibrating] = useState(false);
+  const [prediction, setPrediction] = useState(null);
 
   useEffect(() => {
+    // Connect to the WebSocket server
     const newSocket = io('http://localhost:5000');
     setSocket(newSocket);
 
@@ -16,29 +17,53 @@ function Home() {
       console.log('Connected to server');
     });
 
-    newSocket.on('motion_data', (data) => {
+    // Listen for sensor data
+    newSocket.on('sensor_data', (data) => {
+      console.log('Sensor Data:', data);
       setSensorData(data);
+
+      // Send sensor data to the backend for prediction
+      fetch('http://localhost:5000/predict', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(data), // Send the raw sensor data
+      })
+        .then((response) => response.json())
+        .then((result) => {
+          console.log('Prediction:', result);
+          setPrediction(result.workout_type); // Display the predicted workout type
+        })
+        .catch((error) => console.error('Error fetching prediction:', error));
     });
 
+    // Listen for calibration updates
     newSocket.on('calibration_update', (data) => {
+      console.log('Calibration Data:', data);
       setCalibrationData(data);
     });
 
     return () => {
+      // Disconnect the socket when the component unmounts
       newSocket.disconnect();
     };
   }, []);
 
   const startCalibration = () => {
-    setIsCalibrating(true);
-    socket.emit('start_calibration', (response) => {
-      console.log('Calibration complete:', response);
-      setIsCalibrating(false);
-    });
+    if (socket) {
+      setIsCalibrating(true);
+      socket.emit('start_calibration', (response) => {
+        console.log('Calibration complete:', response);
+        setIsCalibrating(false);
+        setCalibrationData(response); // Set calibration data from server response
+      });
+    }
   };
 
   const startMonitoring = () => {
-    socket.emit('start_monitoring');
+    if (socket) {
+      socket.emit('start_monitoring');
+      console.log('Monitoring started');
+    }
   };
 
   return (
@@ -47,6 +72,7 @@ function Home() {
         <div className="bg-white rounded-lg shadow-lg p-6">
           <h1 className="text-2xl font-bold mb-4">Motion Monitor</h1>
           
+          {/* Calibration and Monitoring Controls */}
           <div className="space-x-4 mb-6">
             <button
               onClick={startCalibration}
@@ -64,6 +90,7 @@ function Home() {
             </button>
           </div>
 
+          {/* Display Calibration Data */}
           {calibrationData && (
             <div className="mb-4">
               <h2 className="text-xl font-semibold mb-2">Calibration Data:</h2>
@@ -73,29 +100,25 @@ function Home() {
             </div>
           )}
 
+          {/* Display Sensor Data */}
           {sensorData && (
             <div>
               <h2 className="text-xl font-semibold mb-2">Sensor Data:</h2>
               <div className="bg-gray-100 p-4 rounded">
                 <div className="grid grid-cols-3 gap-4 mb-4">
-                  <div>X: {sensorData.sensor.x.toFixed(2)}</div>
-                  <div>Y: {sensorData.sensor.y.toFixed(2)}</div>
-                  <div>Z: {sensorData.sensor.z.toFixed(2)}</div>
-                </div>
-                <div className="mt-4">
-                  <h3 className="font-semibold mb-2">Feedback:</h3>
-                  <ul className="list-disc pl-4">
-                    {sensorData.feedback.map((msg, index) => (
-                      <li
-                        key={index}
-                        className={msg.includes('Good form') ? 'text-green-600' : 'text-red-600'}
-                      >
-                        {msg}
-                      </li>
-                    ))}
-                  </ul>
+                  <div>X: {sensorData.x.toFixed(2)}</div>
+                  <div>Y: {sensorData.y.toFixed(2)}</div>
+                  <div>Z: {sensorData.z.toFixed(2)}</div>
                 </div>
               </div>
+            </div>
+          )}
+
+          {/* Display Prediction */}
+          {prediction && (
+            <div className="mt-4">
+              <h2 className="text-xl font-semibold mb-2">Workout Prediction:</h2>
+              <p className="text-lg text-blue-600">{prediction}</p>
             </div>
           )}
         </div>
