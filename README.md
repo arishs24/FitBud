@@ -2,7 +2,7 @@
 
 ## To Get Started
 
-### `git clone`
+### `Project name`
 
 First thing you want to do is enter the path you want to run this project in your command/powershell and git clone this repository.
 
