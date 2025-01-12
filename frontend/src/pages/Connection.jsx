@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import io from 'socket.io-client';
+import { io } from 'socket.io-client';
 
 const Connection = () => {
     const [data, setData] = useState(null);

@@ -18,10 +18,11 @@ const Header = () => {
                         <Link to='/'>Home</Link>
                     </li>
                     <li className='p-4'>
-                        <Link to='/projects'>Projects</Link>
+                        <Link to='/view-patient'>Patient Data</Link>
                     </li>
-                    <li className='p-4'></li>
-                </ul>
+                    <li className='p-4'>
+                        <Link to='/sign-up'>Sign In</Link>
+                    </li>                </ul>
                 <div onClick={handleNav} className='block md:hidden'>
                     {nav ? <AiOutlineClose size={20} /> : <AiOutlineMenu size={20} />}
                 </div>
@@ -31,9 +32,11 @@ const Header = () => {
                         <Link to='/'>Home</Link>
                     </li>
                     <li className='p-4 border-b border-gray-600'>
-                        <Link to='/projects'>Projects</Link>
+                        <Link to='/view-patient'>Patient Data</Link>
                     </li>
-                    <li className='p-4 border-b border-gray-600'></li>
+                    <li className='p-4 border-b border-gray-600'>
+                        <Link to='/sign-up'>Sign In</Link>
+                    </li>
                 </ul>
             </div>
         </div>

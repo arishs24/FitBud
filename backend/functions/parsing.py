@@ -10,6 +10,7 @@ time.sleep(2)
 # Calibration variables
 calibration_mode = True
 calibration_timeout = 15
+calibration_timeout = 15  
 calibration_start_time = None
 x_min, x_max = float('inf'), float('-inf')
 y_min, y_max = float('inf'), float('-inf')
@@ -17,6 +18,7 @@ z_min, z_max = float('inf'), float('-inf')
 
 # Moving average filter
 window_size = 5
+window_size = 5  
 x_values = deque(maxlen=window_size)
 y_values = deque(maxlen=window_size)
 z_values = deque(maxlen=window_size)
@@ -47,6 +49,7 @@ def check_motion_speed(x, y, z):
 
 def read_sensor_data():
     ser.write(b'R\n')
+    ser.write(b'R\n')  
     line = ser.readline().decode('utf-8').strip()
     try:
         if line:
@@ -77,12 +80,20 @@ def calibrate():
         calibration_data["y"].append(y)
         calibration_data["z"].append(z)
 
+        print(f"Calibrating... X: {x}, Y: {y}, Z: {z}")
+
         if time.time() - calibration_start_time > calibration_timeout:
             calibration_mode = False
 
     x_min, x_max = min(calibration_data["x"]), max(calibration_data["x"])
     y_min, y_max = min(calibration_data["y"]), max(calibration_data["y"])
     z_min, z_max = min(calibration_data["z"]), max(calibration_data["z"])
+    x_min = min(calibration_data["x"])
+    x_max = max(calibration_data["x"])
+    y_min = min(calibration_data["y"])
+    y_max = max(calibration_data["y"])
+    z_min = min(calibration_data["z"])
+    z_max = max(calibration_data["z"])
 
     return {
         "status": "complete",
