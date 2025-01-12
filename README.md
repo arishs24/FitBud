@@ -4,7 +4,7 @@
 
 ### `Project name`
 
-First thing you want to do is enter the path you want to run this project in your command/powershell and git clone this repository.
+We have planned to call our invention "FitBud". The prefix "Fit" relates to a healthier and bright future for your body while the suffix "bud" creates a friendlier relationship between the user and the product and company.
 
 ### `Elevator pitch`,
 
