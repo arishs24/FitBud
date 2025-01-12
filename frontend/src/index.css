@@ -1,3 +1,85 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+body {
+  background-image: url("../public/bob.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  color: white;
+  display: flex;
+}
+
+header {
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
+
+  &:hover {
+    background-color: rgba(34, 17, 40, 0.808);
+  }
+}
+
+.container {
+  width: 90vw;
+  height: 45vw;
+  background-color: rgba(34, 17, 40, 0.75);
+  backdrop-filter: blur(19px) saturate(180%);
+  border-bottom-left-radius: 12px;
+  border-bottom-right-radius: 12px;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+  border: 1px solid rgba(255, 255, 255, 0.125);
+  display: flex;
+
+  &:hover {
+    background-color: rgba(34, 17, 40, 0.808);
+  }
+}
+
+.signInContainer {
+  width: 70vw;
+  height: 45vw;
+  background-color: rgba(34, 17, 40, 0.75);
+  backdrop-filter: blur(19px) saturate(180%);
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.125);
+  display: flex;
+}
+
+.loading {
+  padding: 50px;
+  font-size: 30px;
+  border-bottom-left-radius: 12px;
+  border-bottom-right-radius: 12px;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+  background-color: rgba(17, 25, 40, 0.9);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .container {
+    width: 100vw; /* Full viewport width */
+    height: 70vh; /* Increase height to 70% of viewport height */
+  }
+
+  .signInContainer {
+    width: 85vw; /* Increase width */
+    height: 60vh; /* Increase height */
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    width: 100vw; /* Full viewport width */
+    height: 85vh; /* Further increase height to 85% of viewport height */
+  }
+
+  .signInContainer {
+    width: 90vw; /* Further increase width */
+    height: 75vh; /* Further increase height */
+  }
+}
