@@ -31,7 +31,8 @@ const AddPatient = () => {
   };
 
   return (
-    <form onSubmit={handleSubmit}>
+    <div classname='signInContainer'>
+    <form onSubmit={handleSubmit} className="">
       <h1>Add/Update Patient</h1>
       <input
         type="text"
@@ -61,6 +62,7 @@ const AddPatient = () => {
       />
       <button type="submit">Save Patient</button>
     </form>
+    </div>
   );
 };
 

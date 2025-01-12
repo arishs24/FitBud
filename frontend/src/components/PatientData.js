@@ -1,51 +1,66 @@
-import React, { useState, useEffect } from "react";
-import { db } from "../firebase"; 
-import { doc, getDoc } from "firebase/firestore";
-import { useParams } from "react-router-dom"; 
+import React, { useState } from "react";
 
 const PatientData = () => {
-  const { patientId } = useParams(); 
-  const [patientData, setPatientData] = useState(null);
-  const [loading, setLoading] = useState(true);
+  const [condition, setCondition] = useState("");
+  const [response, setResponse] = useState(null);
+  const [loading, setLoading] = useState(false);
 
-  useEffect(() => {
-    const fetchPatientData = async () => {
-      try {
-        const docRef = doc(db, "patients", patientId);
-        const docSnap = await getDoc(docRef);
+  const fetchConditionInfo = async () => {
+    setLoading(true);
+    try {
+      const websocket = new WebSocket("ws://localhost:8765");
 
-        if (docSnap.exists()) {
-          setPatientData(docSnap.data());
-        } else {
-          console.log("No such document!");
-        }
-      } catch (error) {
-        console.error("Error fetching patient data:", error);
-      } finally {
+      websocket.onopen = () => {
+        console.log("WebSocket connection established");
+        websocket.send(condition);
+      };
+
+      websocket.onmessage = (event) => {
+        const data = JSON.parse(event.data);
+        setResponse(data);
+        websocket.close();
         setLoading(false);
-      }
-    };
+      };
 
-    fetchPatientData();
-  }, [patientId]);
+      websocket.onerror = (error) => {
+        console.error("WebSocket error:", error);
+        setLoading(false);
+      };
+    } catch (error) {
+      console.error("Error connecting to WebSocket:", error);
+      setLoading(false);
+    }
+  };
 
-  if (loading) {
-    return <p>Loading patient data...</p>;
-  }
-
-  if (!patientData) {
-    return <p>No data found for this patient.</p>;
-  }
+  const handleInputChange = (e) => {
+    setCondition(e.target.value);
+  };
 
   return (
     <div>
       <h1>Patient Data</h1>
-      <p><strong>Name:</strong> {patientData.name}</p>
-      <p><strong>Age:</strong> {patientData.age}</p>
-      <p><strong>Height:</strong> {patientData.height} cm</p>
-      <p><strong>Weight:</strong> {patientData.weight} kg</p>
-      <p><strong>Sex:</strong> {patientData.sex}</p>
-      <p><strong>Medical Conditions:</strong> {patientData.medical_conditions?.join(", ")}</p>
+      <div>
+        <input
+          type="text"
+          value={condition}
+          onChange={handleInputChange}
+          placeholder="Enter medical condition"
+        />
+        <button onClick={fetchConditionInfo}>Fetch Info</button>
+      </div>
+      {loading && <p>Loading...</p>}
+      {response && (
+        <div>
+          {response.status === "success" ? (
+            <>
+              <h2>Condition: {response.condition}</h2>
+              <p>{response.information}</p>
+            </>
+          ) : (
+            <p>{response.message}</p>
+          )}
+        </div>
+      )}
     </div>
   );
 };
