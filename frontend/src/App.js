@@ -6,6 +6,7 @@ import Home from './pages/Home';
 import Login from './pages/Login';
 import AddPatient from './components/AddPatient';
 import Connection from './pages/Connection';
+import PatientData from './components/PatientData';
 
 
 
@@ -30,6 +31,9 @@ function Navbar({ signUserOut, currentUser }) {
       <ul className="hidden md:flex">
         <li className="p-4">
           <Link to="/">Home</Link>
+        </li>
+        <li className="p-4">
+          <Link to="/med">Backend</Link>
         </li>
         {currentUser && (
           <>
@@ -58,6 +62,9 @@ function Navbar({ signUserOut, currentUser }) {
         <h1 className="w-full text-3xl font-bold text-[#00d59a] m-4">My App</h1>
         <li className="p-4 border-b">
           <Link to="/">Home</Link>
+        </li>
+        <li className="p-4 border-b">
+          <Link to="/med">Backend</Link>
         </li>
         {currentUser && (
           <>
@@ -122,6 +129,7 @@ function App() {
         <Route path='/' element={<Home />} />
         <Route path='/connection' element={<Connection />} />
         <Route path='/patient' element={<AddPatient />} />
+        <Route path='/med' element={<PatientData />} />
         <Route path='/login' element={<Login setIsAuth={setIsAuth} />} />
       </Routes>
     </Router>
