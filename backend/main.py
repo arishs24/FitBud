@@ -1,36 +1,38 @@
+# Flask backend (app.py)
 from flask import Flask
-from flask_cors import CORS
-import logging
-import sys
-import os
-
-print("Hello world")
+from flask_socketio import SocketIO
+from functions.parsing import calibrate, monitor, close_serial
 
 app = Flask(__name__)
-CORS(app)
+socketio = SocketIO(app, cors_allowed_origins="*")
 
-# Configure logging
-logging.basicConfig(
-    level=logging.DEBUG,
-    format='%(asctime)s - %(name)s - %(levelname)s - %(message)s',
-    handlers=[
-        logging.StreamHandler(sys.stdout),
-        logging.FileHandler('app.log')
-    ]
-)
-logger = logging.getLogger(__name__)
+@socketio.on('connect')
+def handle_connect():
+    print('Client connected')
 
-# Ensure all Flask logging also goes to our handlers
-for handler in logging.getLogger().handlers:
-    app.logger.addHandler(handler)
+@socketio.on('disconnect')
+def handle_disconnect():
+    print('Client disconnected')
+    close_serial()
 
-@app.route('/')
-def home():
-    return "Hello, World!"
+@socketio.on('request_calibration')
+def handle_calibration():
+    calibrate()
+    return {'message': 'Calibration complete!'}
+
+def emit_sensor_data():
+    while True:
+        result = monitor()
+        if result:
+            socketio.emit('data_update', result)
+        socketio.sleep(1)
+
+@socketio.on('start_monitoring')
+def handle_start_monitoring():
+    socketio.start_background_task(emit_sensor_data)
 
 if __name__ == '__main__':
-    # Add a test log message to verify logging is working
-    logger.info("Starting Flask application...")
-    
-    port = int(os.environ.get('PORT', 5000))
-    app.run(host='0.0.0.0', port=port, debug=True)
+    try:
+        socketio.run(app, debug=True)
+    except KeyboardInterrupt:
+        close_serial()
