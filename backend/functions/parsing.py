@@ -1,6 +1,6 @@
-import serial
 import time
 from collections import deque
+import serial
 
 # Initialize serial connection
 ser = serial.Serial('COM3', 9600, timeout=1)
@@ -66,28 +66,22 @@ def calibrate():
     """Calibrate the accelerometer by finding min/max values for X, Y, Z."""
     global calibration_mode, calibration_start_time
     global x_min, x_max, y_min, y_max, z_min, z_max
-
     print("Starting Calibration Mode. Perform one repetition...")
     calibration_start_time = time.time()
     calibration_data = {"x": [], "y": [], "z": []}
-
     while calibration_mode:
         x, y, z = read_sensor_data()
         if x is None or y is None or z is None:
             continue
-
         # Collect data for calibration
         calibration_data["x"].append(x)
         calibration_data["y"].append(y)
         calibration_data["z"].append(z)
-
         print(f"Calibrating... X: {x}, Y: {y}, Z: {z}")
-
         # Exit calibration if timeout is reached
         if time.time() - calibration_start_time > calibration_timeout:
             print("Calibration timeout reached.")
             calibration_mode = False
-
     # Use percentiles for thresholds to reduce noise
     x_min = min(calibration_data["x"])
     x_max = max(calibration_data["x"])
@@ -95,7 +89,6 @@ def calibrate():
     y_max = max(calibration_data["y"])
     z_min = min(calibration_data["z"])
     z_max = max(calibration_data["z"])
-
     print("Calibration Complete!")
     print(f"X Min: {x_min}, X Max: {x_max}")
     print(f"Y Min: {y_min}, Y Max: {y_max}")
@@ -108,7 +101,6 @@ def monitor():
         x, y, z = read_sensor_data()
         if x is None or y is None or z is None:
             continue
-
         # Check if readings are within the calibrated range
         if not (x_min <= x <= x_max):
             print("Improper X-axis motion detected!")
@@ -118,10 +110,8 @@ def monitor():
             print("Improper Z-axis motion detected!")
         else:
             print("Good form!")
-
         # Check for speed
         check_motion_speed(x, y, z)
-
         time.sleep(0.1)  # Adjust monitoring rate
 
 if __name__ == "__main__":

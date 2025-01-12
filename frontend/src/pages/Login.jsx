@@ -4,20 +4,12 @@ import {createUserWithEmailAndPassword, signInWithPopup, signInWithEmailAndPassw
 import {useNavigate} from 'react-router-dom';
 import './login.css'
 import {doc, setDoc} from 'firebase/firestore';
-import upload from "../components/uploadPfp";
+import upload from "../lib/uploadPfp";
 
 
 //export class Login extends Component {
   //render() {
 function Login({ setIsAuth }){
-    const signInWithGoogle = () => {
-        signInWithPopup(auth, provider).then((result) => {
-          localStorage.setItem("isAuth", true);
-          setIsAuth(true); // This should work now
-          navigate("/");
-        });
-      };
-    
     const [avatar,setAvatar] = useState({
         file:null,
         url:""
@@ -88,6 +80,13 @@ function Login({ setIsAuth }){
 
     let navigate = useNavigate();
 
+    const signInWithGoogle = () =>{
+        signInWithPopup(auth, provider).then((result) =>{
+            localStorage.setItem("isAuth", true);
+            setIsAuth(true);
+            navigate("/")
+        })
+    }
     return (
         <div className="signInContainer">
             <div className="loginPage">
