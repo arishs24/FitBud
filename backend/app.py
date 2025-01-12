@@ -1,4 +1,6 @@
 import time
+import asyncio
+import websockets
 from collections import deque
 import serial
 
@@ -94,31 +96,28 @@ def calibrate():
     print(f"Y Min: {y_min}, Y Max: {y_max}")
     print(f"Z Min: {z_min}, Z Max: {z_max}")
 
-def monitor():
-    """Monitor accelerometer readings and check for improper motion."""
-    print("Starting Monitoring Mode...")
-    while True:
-        x, y, z = read_sensor_data()
-        if x is None or y is None or z is None:
-            continue
-        # Check if readings are within the calibrated range
-        if not (x_min <= x <= x_max):
-            print("Improper X-axis motion detected!")
-        elif not (y_min <= y <= y_max):
-            print("Improper Y-axis motion detected!")
-        elif not (z_min <= z <= z_max):
-            print("Improper Z-axis motion detected!")
-        else:
-            print("Good form!")
-        # Check for speed
-        check_motion_speed(x, y, z)
-        time.sleep(0.1)  # Adjust monitoring rate
-
-if __name__ == "__main__":
+async def sensor_data(websocket, path):
+    """Send accelerometer data over WebSocket."""
     try:
+        # Calibrate once before starting to send data
         calibrate()
-        monitor()
-    except KeyboardInterrupt:
-        print("Exiting...")
+
+        # Monitor and send sensor data
+        while True:
+            x, y, z = read_sensor_data()
+            if x is None or y is None or z is None:
+                continue
+            data = {"x": x, "y": y, "z": z}
+            await websocket.send(str(data))  # Send data to the frontend
+            time.sleep(0.1)  # Adjust monitoring rate
+    except websockets.exceptions.ConnectionClosed as e:
+        print(f"Connection closed: {e}")
     finally:
         ser.close()
+
+# Start the WebSocket server
+start_server = websockets.serve(sensor_data, "localhost", 8765)
+
+asyncio.get_event_loop().run_until_complete(start_server)
+print("WebSocket server started on ws://localhost:8765")
+asyncio.get_event_loop().run_forever()
