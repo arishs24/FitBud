@@ -15,3 +15,196 @@
 2025-01-11 17:43:20,798 - __main__ - INFO - Starting Flask application...
 2025-01-11 17:43:20,840 - werkzeug - WARNING -  * Debugger is active!
 2025-01-11 17:43:20,847 - werkzeug - INFO -  * Debugger PIN: 741-191-406
+2025-01-11 21:35:57,803 - __main__ - INFO - Starting Flask application...
+2025-01-11 21:35:57,857 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://172.18.77.157:5000
+2025-01-11 21:35:57,859 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-01-11 21:35:57,861 - werkzeug - INFO -  * Restarting with stat
+2025-01-11 21:35:58,269 - __main__ - INFO - Starting Flask application...
+2025-01-11 21:35:58,297 - werkzeug - WARNING -  * Debugger is active!
+2025-01-11 21:35:58,314 - werkzeug - INFO -  * Debugger PIN: 598-188-256
+2025-01-11 21:36:10,723 - werkzeug - INFO - 127.0.0.1 - - [11/Jan/2025 21:36:10] "GET / HTTP/1.1" 200 -
+2025-01-11 21:36:10,883 - werkzeug - INFO - 127.0.0.1 - - [11/Jan/2025 21:36:10] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-01-11 21:38:28,166 - werkzeug - INFO - 127.0.0.1 - - [11/Jan/2025 21:38:28] "[33mGET /socket.io/?EIO=4&transport=polling&t=0a0asvnw HTTP/1.1[0m" 404 -
+2025-01-11 21:38:28,169 - werkzeug - INFO - 127.0.0.1 - - [11/Jan/2025 21:38:28] "[33mGET /socket.io/?EIO=4&transport=polling&t=0a0attwt HTTP/1.1[0m" 404 -
+2025-01-11 21:38:28,766 - werkzeug - INFO - 127.0.0.1 - - [11/Jan/2025 21:38:28] "[33mGET /socket.io/?EIO=4&transport=polling&t=0a108097 HTTP/1.1[0m" 404 -
+2025-01-11 21:38:31,633 - werkzeug - INFO - 127.0.0.1 - - [11/Jan/2025 21:38:31] "[33mGET /socket.io/?EIO=4&transport=polling&t=0a2z9i9r HTTP/1.1[0m" 404 -
+2025-01-11 21:38:34,261 - werkzeug - INFO - 127.0.0.1 - - [11/Jan/2025 21:38:34] "[33mGET /socket.io/?EIO=4&transport=polling&t=0a58tjkt HTTP/1.1[0m" 404 -
+2025-01-11 21:38:40,014 - werkzeug - INFO - 127.0.0.1 - - [11/Jan/2025 21:38:40] "[33mGET /socket.io/?EIO=4&transport=polling&t=0a9excpm HTTP/1.1[0m" 404 -
+2025-01-11 21:38:45,901 - werkzeug - INFO - 127.0.0.1 - - [11/Jan/2025 21:38:45] "[33mGET /socket.io/?EIO=4&transport=polling&t=0ae85ich HTTP/1.1[0m" 404 -
+2025-01-11 21:38:52,207 - werkzeug - INFO - 127.0.0.1 - - [11/Jan/2025 21:38:52] "[33mGET /socket.io/?EIO=4&transport=polling&t=0aiuwuj6 HTTP/1.1[0m" 404 -
+2025-01-11 21:38:57,895 - werkzeug - INFO - 127.0.0.1 - - [11/Jan/2025 21:38:57] "[33mGET /socket.io/?EIO=4&transport=polling&t=0anhfxlz HTTP/1.1[0m" 404 -
+2025-01-11 21:39:04,212 - werkzeug - INFO - 127.0.0.1 - - [11/Jan/2025 21:39:04] "[33mGET /socket.io/?EIO=4&transport=polling&t=0as48yq7 HTTP/1.1[0m" 404 -
+2025-01-11 21:39:09,901 - werkzeug - INFO - 127.0.0.1 - - [11/Jan/2025 21:39:09] "[33mGET /socket.io/?EIO=4&transport=polling&t=0awqunpz HTTP/1.1[0m" 404 -
+2025-01-11 21:39:16,210 - werkzeug - INFO - 127.0.0.1 - - [11/Jan/2025 21:39:16] "[33mGET /socket.io/?EIO=4&transport=polling&t=0b1dmxx6 HTTP/1.1[0m" 404 -
+2025-01-11 21:39:21,898 - werkzeug - INFO - 127.0.0.1 - - [11/Jan/2025 21:39:21] "[33mGET /socket.io/?EIO=4&transport=polling&t=0b603hv7 HTTP/1.1[0m" 404 -
+2025-01-11 21:39:28,241 - werkzeug - INFO - 127.0.0.1 - - [11/Jan/2025 21:39:28] "[33mGET /socket.io/?EIO=4&transport=polling&t=0bamzn0h HTTP/1.1[0m" 404 -
+2025-01-11 21:39:33,902 - werkzeug - INFO - 127.0.0.1 - - [11/Jan/2025 21:39:33] "[33mGET /socket.io/?EIO=4&transport=polling&t=0bf9k4ms HTTP/1.1[0m" 404 -
+2025-01-11 21:39:40,207 - werkzeug - INFO - 127.0.0.1 - - [11/Jan/2025 21:39:40] "[33mGET /socket.io/?EIO=4&transport=polling&t=0bjw40rc HTTP/1.1[0m" 404 -
+2025-01-11 21:39:45,900 - werkzeug - INFO - 127.0.0.1 - - [11/Jan/2025 21:39:45] "[33mGET /socket.io/?EIO=4&transport=polling&t=0boislx0 HTTP/1.1[0m" 404 -
+2025-01-11 21:39:52,206 - werkzeug - INFO - 127.0.0.1 - - [11/Jan/2025 21:39:52] "[33mGET /socket.io/?EIO=4&transport=polling&t=0bt5g5sg HTTP/1.1[0m" 404 -
+2025-01-11 21:39:57,899 - werkzeug - INFO - 127.0.0.1 - - [11/Jan/2025 21:39:57] "[33mGET /socket.io/?EIO=4&transport=polling&t=0bxs44v1 HTTP/1.1[0m" 404 -
+2025-01-11 21:40:04,215 - werkzeug - INFO - 127.0.0.1 - - [11/Jan/2025 21:40:04] "[33mGET /socket.io/?EIO=4&transport=polling&t=0c2et1ue HTTP/1.1[0m" 404 -
+2025-01-11 21:40:09,907 - werkzeug - INFO - 127.0.0.1 - - [11/Jan/2025 21:40:09] "[33mGET /socket.io/?EIO=4&transport=polling&t=0c71m5s4 HTTP/1.1[0m" 404 -
+2025-01-11 21:40:16,209 - werkzeug - INFO - 127.0.0.1 - - [11/Jan/2025 21:40:16] "[33mGET /socket.io/?EIO=4&transport=polling&t=0cbo8mae HTTP/1.1[0m" 404 -
+2025-01-11 21:40:21,902 - werkzeug - INFO - 127.0.0.1 - - [11/Jan/2025 21:40:21] "[33mGET /socket.io/?EIO=4&transport=polling&t=0cgat1l3 HTTP/1.1[0m" 404 -
+2025-01-11 21:40:28,199 - werkzeug - INFO - 127.0.0.1 - - [11/Jan/2025 21:40:28] "[33mGET /socket.io/?EIO=4&transport=polling&t=0ckxdwue HTTP/1.1[0m" 404 -
+2025-01-11 21:40:33,896 - werkzeug - INFO - 127.0.0.1 - - [11/Jan/2025 21:40:33] "[33mGET /socket.io/?EIO=4&transport=polling&t=0cpk1714 HTTP/1.1[0m" 404 -
+2025-01-11 21:40:40,222 - werkzeug - INFO - 127.0.0.1 - - [11/Jan/2025 21:40:40] "[33mGET /socket.io/?EIO=4&transport=polling&t=0cu7337u HTTP/1.1[0m" 404 -
+2025-01-11 21:40:45,895 - werkzeug - INFO - 127.0.0.1 - - [11/Jan/2025 21:40:45] "[33mGET /socket.io/?EIO=4&transport=polling&t=0cytcwzk HTTP/1.1[0m" 404 -
+2025-01-11 21:40:52,216 - werkzeug - INFO - 127.0.0.1 - - [11/Jan/2025 21:40:52] "[33mGET /socket.io/?EIO=4&transport=polling&t=0d3g6as8 HTTP/1.1[0m" 404 -
+2025-01-11 21:40:58,207 - werkzeug - INFO - 127.0.0.1 - - [11/Jan/2025 21:40:58] "[33mGET /socket.io/?EIO=4&transport=polling&t=0d82whgq HTTP/1.1[0m" 404 -
+2025-01-11 21:41:03,896 - werkzeug - INFO - 127.0.0.1 - - [11/Jan/2025 21:41:03] "[33mGET /socket.io/?EIO=4&transport=polling&t=0dcpfevi HTTP/1.1[0m" 404 -
+2025-01-11 21:41:10,217 - werkzeug - INFO - 127.0.0.1 - - [11/Jan/2025 21:41:10] "[33mGET /socket.io/?EIO=4&transport=polling&t=0dhc6g4t HTTP/1.1[0m" 404 -
+2025-01-11 21:41:15,548 - werkzeug - INFO - 127.0.0.1 - - [11/Jan/2025 21:41:15] "[33mGET /socket.io/?EIO=4&transport=polling&t=0dlgipgl HTTP/1.1[0m" 404 -
+2025-01-11 21:41:20,574 - werkzeug - INFO - 127.0.0.1 - - [11/Jan/2025 21:41:20] "[33mGET /socket.io/?EIO=4&transport=polling&t=0dpkjbiv HTTP/1.1[0m" 404 -
+2025-01-11 21:41:25,899 - werkzeug - INFO - 127.0.0.1 - - [11/Jan/2025 21:41:25] "[33mGET /socket.io/?EIO=4&transport=polling&t=0dtfx18n HTTP/1.1[0m" 404 -
+2025-01-11 21:41:31,899 - werkzeug - INFO - 127.0.0.1 - - [11/Jan/2025 21:41:31] "[33mGET /socket.io/?EIO=4&transport=polling&t=0dybavbo HTTP/1.1[0m" 404 -
+2025-01-11 21:41:38,217 - werkzeug - INFO - 127.0.0.1 - - [11/Jan/2025 21:41:38] "[33mGET /socket.io/?EIO=4&transport=polling&t=0e2xx6vo HTTP/1.1[0m" 404 -
+2025-01-11 21:41:43,904 - werkzeug - INFO - 127.0.0.1 - - [11/Jan/2025 21:41:43] "[33mGET /socket.io/?EIO=4&transport=polling&t=0e7kq2l0 HTTP/1.1[0m" 404 -
+2025-01-11 21:41:50,203 - werkzeug - INFO - 127.0.0.1 - - [11/Jan/2025 21:41:50] "[33mGET /socket.io/?EIO=4&transport=polling&t=0ec7c9t6 HTTP/1.1[0m" 404 -
+2025-01-11 21:41:55,900 - werkzeug - INFO - 127.0.0.1 - - [11/Jan/2025 21:41:55] "[33mGET /socket.io/?EIO=4&transport=polling&t=0egtxqug HTTP/1.1[0m" 404 -
+2025-01-11 21:41:57,236 - werkzeug - INFO -  * Detected change in 'C:\\Users\\ssurk\\Documents\\Coding Project\\Delta2\\backend\\functions\\parsing.py', reloading
+2025-01-11 21:41:57,335 - werkzeug - INFO -  * Restarting with stat
+2025-01-11 21:41:58,077 - __main__ - INFO - Starting Flask application...
+2025-01-11 21:41:58,127 - werkzeug - WARNING -  * Debugger is active!
+2025-01-11 21:41:58,141 - werkzeug - INFO -  * Debugger PIN: 598-188-256
+2025-01-11 21:42:02,218 - werkzeug - INFO - 127.0.0.1 - - [11/Jan/2025 21:42:02] "[33mGET /socket.io/?EIO=4&transport=polling&t=0elgms5n HTTP/1.1[0m" 404 -
+2025-01-11 21:42:08,213 - werkzeug - INFO - 127.0.0.1 - - [11/Jan/2025 21:42:08] "[33mGET /socket.io/?EIO=4&transport=polling&t=0eq3gplw HTTP/1.1[0m" 404 -
+2025-01-11 21:42:13,901 - werkzeug - INFO - 127.0.0.1 - - [11/Jan/2025 21:42:13] "[33mGET /socket.io/?EIO=4&transport=polling&t=0eupz7rc HTTP/1.1[0m" 404 -
+2025-01-11 21:42:20,221 - werkzeug - INFO - 127.0.0.1 - - [11/Jan/2025 21:42:20] "[33mGET /socket.io/?EIO=4&transport=polling&t=0ezcrbmm HTTP/1.1[0m" 404 -
+2025-01-11 21:42:25,911 - werkzeug - INFO - 127.0.0.1 - - [11/Jan/2025 21:42:25] "[33mGET /socket.io/?EIO=4&transport=polling&t=0f3zgpvt HTTP/1.1[0m" 404 -
+2025-01-11 21:42:32,215 - werkzeug - INFO - 127.0.0.1 - - [11/Jan/2025 21:42:32] "[33mGET /socket.io/?EIO=4&transport=polling&t=0f8lu71x HTTP/1.1[0m" 404 -
+2025-01-11 21:42:37,909 - werkzeug - INFO - 127.0.0.1 - - [11/Jan/2025 21:42:37] "[33mGET /socket.io/?EIO=4&transport=polling&t=0fd8uxb3 HTTP/1.1[0m" 404 -
+2025-01-11 21:42:44,210 - werkzeug - INFO - 127.0.0.1 - - [11/Jan/2025 21:42:44] "[33mGET /socket.io/?EIO=4&transport=polling&t=0fhvaala HTTP/1.1[0m" 404 -
+2025-01-11 21:42:49,901 - werkzeug - INFO - 127.0.0.1 - - [11/Jan/2025 21:42:49] "[33mGET /socket.io/?EIO=4&transport=polling&t=0fmi06r2 HTTP/1.1[0m" 404 -
+2025-01-11 21:42:56,215 - werkzeug - INFO - 127.0.0.1 - - [11/Jan/2025 21:42:56] "[33mGET /socket.io/?EIO=4&transport=polling&t=0fr4lq2n HTTP/1.1[0m" 404 -
+2025-01-11 21:43:01,909 - werkzeug - INFO - 127.0.0.1 - - [11/Jan/2025 21:43:01] "[33mGET /socket.io/?EIO=4&transport=polling&t=0fvrbfoq HTTP/1.1[0m" 404 -
+2025-01-11 21:43:08,221 - werkzeug - INFO - 127.0.0.1 - - [11/Jan/2025 21:43:08] "[33mGET /socket.io/?EIO=4&transport=polling&t=0g0e1f30 HTTP/1.1[0m" 404 -
+2025-01-11 21:43:13,911 - werkzeug - INFO - 127.0.0.1 - - [11/Jan/2025 21:43:13] "[33mGET /socket.io/?EIO=4&transport=polling&t=0g50xj2l HTTP/1.1[0m" 404 -
+2025-01-11 21:43:20,217 - werkzeug - INFO - 127.0.0.1 - - [11/Jan/2025 21:43:20] "[33mGET /socket.io/?EIO=4&transport=polling&t=0g9nepun HTTP/1.1[0m" 404 -
+2025-01-11 21:43:25,908 - werkzeug - INFO - 127.0.0.1 - - [11/Jan/2025 21:43:25] "[33mGET /socket.io/?EIO=4&transport=polling&t=0gea5hat HTTP/1.1[0m" 404 -
+2025-01-11 21:43:32,199 - werkzeug - INFO - 127.0.0.1 - - [11/Jan/2025 21:43:32] "[33mGET /socket.io/?EIO=4&transport=polling&t=0giwgpi9 HTTP/1.1[0m" 404 -
+2025-01-11 21:43:37,901 - werkzeug - INFO - 127.0.0.1 - - [11/Jan/2025 21:43:37] "[33mGET /socket.io/?EIO=4&transport=polling&t=0gnj9j9o HTTP/1.1[0m" 404 -
+2025-01-11 21:43:44,204 - werkzeug - INFO - 127.0.0.1 - - [11/Jan/2025 21:43:44] "[33mGET /socket.io/?EIO=4&transport=polling&t=0gs5w2sd HTTP/1.1[0m" 404 -
+2025-01-11 21:43:49,910 - werkzeug - INFO - 127.0.0.1 - - [11/Jan/2025 21:43:49] "[33mGET /socket.io/?EIO=4&transport=polling&t=0gwstjg1 HTTP/1.1[0m" 404 -
+2025-01-11 21:43:56,209 - werkzeug - INFO - 127.0.0.1 - - [11/Jan/2025 21:43:56] "[33mGET /socket.io/?EIO=4&transport=polling&t=0h1f5p2k HTTP/1.1[0m" 404 -
+2025-01-11 21:44:01,898 - werkzeug - INFO - 127.0.0.1 - - [11/Jan/2025 21:44:01] "[33mGET /socket.io/?EIO=4&transport=polling&t=0h61z4pl HTTP/1.1[0m" 404 -
+2025-01-11 21:44:08,213 - werkzeug - INFO - 127.0.0.1 - - [11/Jan/2025 21:44:08] "[33mGET /socket.io/?EIO=4&transport=polling&t=0haoo7ja HTTP/1.1[0m" 404 -
+2025-01-11 21:44:13,903 - werkzeug - INFO - 127.0.0.1 - - [11/Jan/2025 21:44:13] "[33mGET /socket.io/?EIO=4&transport=polling&t=0hfb91x9 HTTP/1.1[0m" 404 -
+2025-01-11 21:44:20,212 - werkzeug - INFO - 127.0.0.1 - - [11/Jan/2025 21:44:20] "[33mGET /socket.io/?EIO=4&transport=polling&t=0hjy21qy HTTP/1.1[0m" 404 -
+2025-01-11 21:44:26,219 - werkzeug - INFO - 127.0.0.1 - - [11/Jan/2025 21:44:26] "[33mGET /socket.io/?EIO=4&transport=polling&t=0hokofy0 HTTP/1.1[0m" 404 -
+2025-01-11 21:44:31,900 - werkzeug - INFO - 127.0.0.1 - - [11/Jan/2025 21:44:31] "[33mGET /socket.io/?EIO=4&transport=polling&t=0ht7asl7 HTTP/1.1[0m" 404 -
+2025-01-11 21:44:34,216 - werkzeug - INFO -  * Detected change in 'C:\\Users\\ssurk\\Documents\\Coding Project\\Delta2\\backend\\functions\\parsing.py', reloading
+2025-01-11 21:44:34,323 - werkzeug - INFO -  * Restarting with stat
+2025-01-11 21:44:34,960 - __main__ - INFO - Starting Flask application...
+2025-01-11 21:44:34,998 - werkzeug - WARNING -  * Debugger is active!
+2025-01-11 21:44:35,007 - werkzeug - INFO -  * Debugger PIN: 598-188-256
+2025-01-11 21:44:38,215 - werkzeug - INFO - 127.0.0.1 - - [11/Jan/2025 21:44:38] "[33mGET /socket.io/?EIO=4&transport=polling&t=0hxu5os0 HTTP/1.1[0m" 404 -
+2025-01-11 21:44:43,896 - werkzeug - INFO - 127.0.0.1 - - [11/Jan/2025 21:44:43] "[33mGET /socket.io/?EIO=4&transport=polling&t=0i2gi849 HTTP/1.1[0m" 404 -
+2025-01-11 21:44:50,200 - werkzeug - INFO - 127.0.0.1 - - [11/Jan/2025 21:44:50] "[33mGET /socket.io/?EIO=4&transport=polling&t=0i739ik7 HTTP/1.1[0m" 404 -
+2025-01-11 21:44:55,900 - werkzeug - INFO - 127.0.0.1 - - [11/Jan/2025 21:44:55] "[33mGET /socket.io/?EIO=4&transport=polling&t=0ibq097a HTTP/1.1[0m" 404 -
+2025-01-11 21:45:02,213 - werkzeug - INFO - 127.0.0.1 - - [11/Jan/2025 21:45:02] "[33mGET /socket.io/?EIO=4&transport=polling&t=0igcmkhv HTTP/1.1[0m" 404 -
+2025-01-11 21:45:06,474 - werkzeug - INFO -  * Detected change in 'C:\\Users\\ssurk\\Documents\\Coding Project\\Delta2\\backend\\app.py', reloading
+2025-01-11 21:45:06,551 - werkzeug - INFO -  * Restarting with stat
+2025-01-11 21:45:07,040 - __main__ - INFO - Starting Flask application...
+2025-01-11 21:45:07,071 - werkzeug - WARNING -  * Debugger is active!
+2025-01-11 21:45:07,078 - werkzeug - INFO -  * Debugger PIN: 598-188-256
+2025-01-11 21:45:08,202 - werkzeug - INFO - 127.0.0.1 - - [11/Jan/2025 21:45:08] "[33mGET /socket.io/?EIO=4&transport=polling&t=0ikz5hlx HTTP/1.1[0m" 404 -
+2025-01-11 21:45:13,897 - werkzeug - INFO - 127.0.0.1 - - [11/Jan/2025 21:45:13] "[33mGET /socket.io/?EIO=4&transport=polling&t=0iplxth5 HTTP/1.1[0m" 404 -
+2025-01-11 21:45:20,220 - werkzeug - INFO - 127.0.0.1 - - [11/Jan/2025 21:45:20] "[33mGET /socket.io/?EIO=4&transport=polling&t=0iu8k87z HTTP/1.1[0m" 404 -
+2025-01-11 21:45:22,308 - werkzeug - INFO -  * Detected change in 'C:\\Users\\ssurk\\Documents\\Coding Project\\Delta2\\backend\\app.py', reloading
+2025-01-11 21:45:22,377 - werkzeug - INFO -  * Restarting with stat
+2025-01-11 21:45:22,804 - __main__ - INFO - Starting Flask application...
+2025-01-11 21:45:22,839 - werkzeug - WARNING -  * Debugger is active!
+2025-01-11 21:45:22,848 - werkzeug - INFO -  * Debugger PIN: 598-188-256
+2025-01-11 21:45:26,217 - werkzeug - INFO - 127.0.0.1 - - [11/Jan/2025 21:45:26] "[33mGET /socket.io/?EIO=4&transport=polling&t=0iyvhhnr HTTP/1.1[0m" 404 -
+2025-01-11 21:45:32,210 - werkzeug - INFO - 127.0.0.1 - - [11/Jan/2025 21:45:32] "[33mGET /socket.io/?EIO=4&transport=polling&t=0j3hth8k HTTP/1.1[0m" 404 -
+2025-01-11 21:45:37,902 - werkzeug - INFO - 127.0.0.1 - - [11/Jan/2025 21:45:37] "[33mGET /socket.io/?EIO=4&transport=polling&t=0j84n1o2 HTTP/1.1[0m" 404 -
+2025-01-11 21:45:44,208 - werkzeug - INFO - 127.0.0.1 - - [11/Jan/2025 21:45:44] "[33mGET /socket.io/?EIO=4&transport=polling&t=0jcrdx1c HTTP/1.1[0m" 404 -
+2025-01-11 21:45:50,209 - werkzeug - INFO - 127.0.0.1 - - [11/Jan/2025 21:45:50] "[33mGET /socket.io/?EIO=4&transport=polling&t=0jhe1811 HTTP/1.1[0m" 404 -
+2025-01-11 21:45:55,897 - werkzeug - INFO - 127.0.0.1 - - [11/Jan/2025 21:45:55] "[33mGET /socket.io/?EIO=4&transport=polling&t=0jm0jo7f HTTP/1.1[0m" 404 -
+2025-01-11 21:46:02,218 - werkzeug - INFO - 127.0.0.1 - - [11/Jan/2025 21:46:02] "[33mGET /socket.io/?EIO=4&transport=polling&t=0jqncj0e HTTP/1.1[0m" 404 -
+2025-01-11 21:46:07,900 - werkzeug - INFO - 127.0.0.1 - - [11/Jan/2025 21:46:07] "[33mGET /socket.io/?EIO=4&transport=polling&t=0jv9ukwr HTTP/1.1[0m" 404 -
+2025-01-11 21:46:14,204 - werkzeug - INFO - 127.0.0.1 - - [11/Jan/2025 21:46:14] "[33mGET /socket.io/?EIO=4&transport=polling&t=0jzwnd8w HTTP/1.1[0m" 404 -
+2025-01-11 21:46:19,896 - werkzeug - INFO - 127.0.0.1 - - [11/Jan/2025 21:46:19] "[33mGET /socket.io/?EIO=4&transport=polling&t=0k4j8567 HTTP/1.1[0m" 404 -
+2025-01-11 21:46:26,211 - werkzeug - INFO - 127.0.0.1 - - [11/Jan/2025 21:46:26] "[33mGET /socket.io/?EIO=4&transport=polling&t=0k95zjwn HTTP/1.1[0m" 404 -
+2025-01-11 21:46:31,900 - werkzeug - INFO - 127.0.0.1 - - [11/Jan/2025 21:46:31] "[33mGET /socket.io/?EIO=4&transport=polling&t=0kdsncsf HTTP/1.1[0m" 404 -
+2025-01-11 21:46:38,210 - werkzeug - INFO - 127.0.0.1 - - [11/Jan/2025 21:46:38] "[33mGET /socket.io/?EIO=4&transport=polling&t=0kif7n1l HTTP/1.1[0m" 404 -
+2025-01-11 21:46:43,896 - werkzeug - INFO - 127.0.0.1 - - [11/Jan/2025 21:46:43] "[33mGET /socket.io/?EIO=4&transport=polling&t=0kn1teec HTTP/1.1[0m" 404 -
+2025-01-11 21:46:50,216 - werkzeug - INFO - 127.0.0.1 - - [11/Jan/2025 21:46:50] "[33mGET /socket.io/?EIO=4&transport=polling&t=0krosioj HTTP/1.1[0m" 404 -
+2025-01-11 21:46:55,896 - werkzeug - INFO - 127.0.0.1 - - [11/Jan/2025 21:46:55] "[33mGET /socket.io/?EIO=4&transport=polling&t=0kwb6eyx HTTP/1.1[0m" 404 -
+2025-01-11 21:47:02,217 - werkzeug - INFO - 127.0.0.1 - - [11/Jan/2025 21:47:02] "[33mGET /socket.io/?EIO=4&transport=polling&t=0l0xz550 HTTP/1.1[0m" 404 -
+2025-01-11 21:47:07,898 - werkzeug - INFO - 127.0.0.1 - - [11/Jan/2025 21:47:07] "[33mGET /socket.io/?EIO=4&transport=polling&t=0l5kium6 HTTP/1.1[0m" 404 -
+2025-01-11 21:47:14,208 - werkzeug - INFO - 127.0.0.1 - - [11/Jan/2025 21:47:14] "[33mGET /socket.io/?EIO=4&transport=polling&t=0la74zbs HTTP/1.1[0m" 404 -
+2025-01-11 21:47:20,196 - werkzeug - INFO - 127.0.0.1 - - [11/Jan/2025 21:47:20] "[33mGET /socket.io/?EIO=4&transport=polling&t=0letughg HTTP/1.1[0m" 404 -
+2025-01-11 21:47:25,909 - werkzeug - INFO - 127.0.0.1 - - [11/Jan/2025 21:47:25] "[33mGET /socket.io/?EIO=4&transport=polling&t=0ljgtm3z HTTP/1.1[0m" 404 -
+2025-01-11 21:47:32,218 - werkzeug - INFO - 127.0.0.1 - - [11/Jan/2025 21:47:32] "[33mGET /socket.io/?EIO=4&transport=polling&t=0lo3c51y HTTP/1.1[0m" 404 -
+2025-01-11 21:47:37,902 - werkzeug - INFO - 127.0.0.1 - - [11/Jan/2025 21:47:37] "[33mGET /socket.io/?EIO=4&transport=polling&t=0lsq1ee1 HTTP/1.1[0m" 404 -
+2025-01-11 21:47:44,202 - werkzeug - INFO - 127.0.0.1 - - [11/Jan/2025 21:47:44] "[33mGET /socket.io/?EIO=4&transport=polling&t=0lxcgtt3 HTTP/1.1[0m" 404 -
+2025-01-11 21:47:49,898 - werkzeug - INFO - 127.0.0.1 - - [11/Jan/2025 21:47:49] "[33mGET /socket.io/?EIO=4&transport=polling&t=0m1z71ol HTTP/1.1[0m" 404 -
+2025-01-11 21:47:56,206 - werkzeug - INFO - 127.0.0.1 - - [11/Jan/2025 21:47:56] "[33mGET /socket.io/?EIO=4&transport=polling&t=0m6lzjz3 HTTP/1.1[0m" 404 -
+2025-01-11 21:48:01,905 - werkzeug - INFO - 127.0.0.1 - - [11/Jan/2025 21:48:01] "[33mGET /socket.io/?EIO=4&transport=polling&t=0mb8pb5e HTTP/1.1[0m" 404 -
+2025-01-11 21:48:08,218 - werkzeug - INFO - 127.0.0.1 - - [11/Jan/2025 21:48:08] "[33mGET /socket.io/?EIO=4&transport=polling&t=0mfvi830 HTTP/1.1[0m" 404 -
+2025-01-11 21:48:13,907 - werkzeug - INFO - 127.0.0.1 - - [11/Jan/2025 21:48:13] "[33mGET /socket.io/?EIO=4&transport=polling&t=0mkhzrza HTTP/1.1[0m" 404 -
+2025-01-11 21:48:20,202 - werkzeug - INFO - 127.0.0.1 - - [11/Jan/2025 21:48:20] "[33mGET /socket.io/?EIO=4&transport=polling&t=0mp4j1aa HTTP/1.1[0m" 404 -
+2025-01-11 21:48:25,892 - werkzeug - INFO - 127.0.0.1 - - [11/Jan/2025 21:48:25] "[33mGET /socket.io/?EIO=4&transport=polling&t=0mtr5u3m HTTP/1.1[0m" 404 -
+2025-01-11 21:48:32,200 - werkzeug - INFO - 127.0.0.1 - - [11/Jan/2025 21:48:32] "[33mGET /socket.io/?EIO=4&transport=polling&t=0mydvnye HTTP/1.1[0m" 404 -
+2025-01-11 21:48:37,918 - werkzeug - INFO - 127.0.0.1 - - [11/Jan/2025 21:48:37] "[33mGET /socket.io/?EIO=4&transport=polling&t=0n30uxl3 HTTP/1.1[0m" 404 -
+2025-01-11 21:48:40,391 - werkzeug - INFO -  * Detected change in 'C:\\Users\\ssurk\\Documents\\Coding Project\\Delta2\\backend\\functions\\parsing.py', reloading
+2025-01-11 21:48:40,542 - werkzeug - INFO -  * Restarting with stat
+2025-01-11 21:48:41,228 - __main__ - INFO - Starting Flask application...
+2025-01-11 21:48:41,303 - werkzeug - WARNING -  * Debugger is active!
+2025-01-11 21:48:41,311 - werkzeug - INFO -  * Debugger PIN: 598-188-256
+2025-01-11 21:48:44,218 - werkzeug - INFO - 127.0.0.1 - - [11/Jan/2025 21:48:44] "[33mGET /socket.io/?EIO=4&transport=polling&t=0n7ncgo1 HTTP/1.1[0m" 404 -
+2025-01-11 21:48:49,896 - werkzeug - INFO - 127.0.0.1 - - [11/Jan/2025 21:48:49] "[33mGET /socket.io/?EIO=4&transport=polling&t=0nc9tooi HTTP/1.1[0m" 404 -
+2025-01-11 21:48:56,230 - werkzeug - INFO - 127.0.0.1 - - [11/Jan/2025 21:48:56] "[33mGET /socket.io/?EIO=4&transport=polling&t=0ngwpu74 HTTP/1.1[0m" 404 -
+2025-01-11 21:49:02,224 - werkzeug - INFO - 127.0.0.1 - - [11/Jan/2025 21:49:02] "[33mGET /socket.io/?EIO=4&transport=polling&t=0nljilr2 HTTP/1.1[0m" 404 -
+2025-01-11 21:49:07,900 - werkzeug - INFO - 127.0.0.1 - - [11/Jan/2025 21:49:07] "[33mGET /socket.io/?EIO=4&transport=polling&t=0nq5w1xb HTTP/1.1[0m" 404 -
+2025-01-11 21:49:14,230 - werkzeug - INFO - 127.0.0.1 - - [11/Jan/2025 21:49:14] "[33mGET /socket.io/?EIO=4&transport=polling&t=0nusnhml HTTP/1.1[0m" 404 -
+2025-01-11 21:49:19,907 - werkzeug - INFO - 127.0.0.1 - - [11/Jan/2025 21:49:19] "[33mGET /socket.io/?EIO=4&transport=polling&t=0nzfcbk7 HTTP/1.1[0m" 404 -
+2025-01-11 21:49:26,215 - werkzeug - INFO - 127.0.0.1 - - [11/Jan/2025 21:49:26] "[33mGET /socket.io/?EIO=4&transport=polling&t=0o41y3mb HTTP/1.1[0m" 404 -
+2025-01-11 21:49:32,209 - werkzeug - INFO - 127.0.0.1 - - [11/Jan/2025 21:49:32] "[33mGET /socket.io/?EIO=4&transport=polling&t=0o8oh2ef HTTP/1.1[0m" 404 -
+2025-01-11 21:49:37,911 - werkzeug - INFO - 127.0.0.1 - - [11/Jan/2025 21:49:37] "[33mGET /socket.io/?EIO=4&transport=polling&t=0odbf62r HTTP/1.1[0m" 404 -
+2025-01-11 21:49:44,204 - werkzeug - INFO - 127.0.0.1 - - [11/Jan/2025 21:49:44] "[33mGET /socket.io/?EIO=4&transport=polling&t=0ohxv7mw HTTP/1.1[0m" 404 -
+2025-01-11 21:49:49,902 - werkzeug - INFO - 127.0.0.1 - - [11/Jan/2025 21:49:49] "[33mGET /socket.io/?EIO=4&transport=polling&t=0omko7hl HTTP/1.1[0m" 404 -
+2025-01-11 21:49:56,220 - werkzeug - INFO - 127.0.0.1 - - [11/Jan/2025 21:49:56] "[33mGET /socket.io/?EIO=4&transport=polling&t=0or7amaq HTTP/1.1[0m" 404 -
+2025-01-11 21:50:02,208 - werkzeug - INFO - 127.0.0.1 - - [11/Jan/2025 21:50:02] "[33mGET /socket.io/?EIO=4&transport=polling&t=0ovtxbgz HTTP/1.1[0m" 404 -
+2025-01-11 21:50:04,862 - werkzeug - INFO -  * Detected change in 'C:\\Users\\ssurk\\Documents\\Coding Project\\Delta2\\backend\\functions\\parsing.py', reloading
+2025-01-11 21:50:05,000 - werkzeug - INFO -  * Restarting with stat
+2025-01-11 21:50:05,680 - __main__ - INFO - Starting Flask application...
+2025-01-11 21:50:05,723 - werkzeug - WARNING -  * Debugger is active!
+2025-01-11 21:50:05,732 - werkzeug - INFO -  * Debugger PIN: 598-188-256
+2025-01-11 21:50:08,210 - werkzeug - INFO - 127.0.0.1 - - [11/Jan/2025 21:50:08] "[33mGET /socket.io/?EIO=4&transport=polling&t=0p0gn0vg HTTP/1.1[0m" 404 -
+2025-01-11 21:50:14,205 - werkzeug - INFO - 127.0.0.1 - - [11/Jan/2025 21:50:14] "[33mGET /socket.io/?EIO=4&transport=polling&t=0p537svp HTTP/1.1[0m" 404 -
+2025-01-11 21:50:19,899 - werkzeug - INFO - 127.0.0.1 - - [11/Jan/2025 21:50:19] "[33mGET /socket.io/?EIO=4&transport=polling&t=0p9pz3j4 HTTP/1.1[0m" 404 -
+2025-01-11 21:50:26,221 - werkzeug - INFO - 127.0.0.1 - - [11/Jan/2025 21:50:26] "[33mGET /socket.io/?EIO=4&transport=polling&t=0pecp87u HTTP/1.1[0m" 404 -
+2025-01-11 21:50:32,204 - werkzeug - INFO - 127.0.0.1 - - [11/Jan/2025 21:50:32] "[33mGET /socket.io/?EIO=4&transport=polling&t=0piz4w94 HTTP/1.1[0m" 404 -
+2025-01-11 21:50:37,903 - werkzeug - INFO - 127.0.0.1 - - [11/Jan/2025 21:50:37] "[33mGET /socket.io/?EIO=4&transport=polling&t=0pnm1s12 HTTP/1.1[0m" 404 -
+2025-01-11 21:50:44,205 - werkzeug - INFO - 127.0.0.1 - - [11/Jan/2025 21:50:44] "[33mGET /socket.io/?EIO=4&transport=polling&t=0ps8gvya HTTP/1.1[0m" 404 -
+2025-01-11 21:50:49,904 - werkzeug - INFO - 127.0.0.1 - - [11/Jan/2025 21:50:49] "[33mGET /socket.io/?EIO=4&transport=polling&t=0pwvcdfo HTTP/1.1[0m" 404 -
+2025-01-11 21:50:56,974 - werkzeug - INFO - 127.0.0.1 - - [11/Jan/2025 21:50:56] "[33mGET /socket.io/?EIO=4&transport=polling&t=0q1hwm6m HTTP/1.1[0m" 404 -
+2025-01-11 21:51:02,902 - werkzeug - INFO - 127.0.0.1 - - [11/Jan/2025 21:51:02] "[33mGET /socket.io/?EIO=4&transport=polling&t=0q6wet1i HTTP/1.1[0m" 404 -
+2025-01-11 21:51:09,211 - werkzeug - INFO - 127.0.0.1 - - [11/Jan/2025 21:51:09] "[33mGET /socket.io/?EIO=4&transport=polling&t=0qbj37mw HTTP/1.1[0m" 404 -
+2025-01-11 21:51:14,901 - werkzeug - INFO - 127.0.0.1 - - [11/Jan/2025 21:51:14] "[33mGET /socket.io/?EIO=4&transport=polling&t=0qg5q3yy HTTP/1.1[0m" 404 -
+2025-01-11 21:51:21,202 - werkzeug - INFO - 127.0.0.1 - - [11/Jan/2025 21:51:21] "[33mGET /socket.io/?EIO=4&transport=polling&t=0qks99ov HTTP/1.1[0m" 404 -
+2025-01-11 21:51:27,234 - werkzeug - INFO - 127.0.0.1 - - [11/Jan/2025 21:51:27] "[33mGET /socket.io/?EIO=4&transport=polling&t=0qpf7i1s HTTP/1.1[0m" 404 -
+2025-01-11 21:51:32,225 - werkzeug - INFO -  * Detected change in 'C:\\Users\\ssurk\\Documents\\Coding Project\\Delta2\\backend\\app.py', reloading
+2025-01-11 21:51:32,307 - werkzeug - INFO -  * Restarting with stat
+2025-01-11 21:51:32,755 - __main__ - INFO - Starting Flask application...
+2025-01-11 21:51:32,777 - werkzeug - WARNING -  * Debugger is active!
+2025-01-11 21:51:32,783 - werkzeug - INFO -  * Debugger PIN: 598-188-256
+2025-01-11 21:51:33,209 - werkzeug - INFO - 127.0.0.1 - - [11/Jan/2025 21:51:33] "[33mGET /socket.io/?EIO=4&transport=polling&t=0qu1u9pj HTTP/1.1[0m" 404 -
+2025-01-11 21:51:39,206 - werkzeug - INFO - 127.0.0.1 - - [11/Jan/2025 21:51:39] "[33mGET /socket.io/?EIO=4&transport=polling&t=0qyo84zf HTTP/1.1[0m" 404 -
+2025-01-11 21:51:44,905 - werkzeug - INFO - 127.0.0.1 - - [11/Jan/2025 21:51:44] "[33mGET /socket.io/?EIO=4&transport=polling&t=0r3b4l4a HTTP/1.1[0m" 404 -
+2025-01-11 21:51:51,218 - werkzeug - INFO - 127.0.0.1 - - [11/Jan/2025 21:51:51] "[33mGET /socket.io/?EIO=4&transport=polling&t=0r7xtosy HTTP/1.1[0m" 404 -
+2025-01-11 21:51:56,898 - werkzeug - INFO - 127.0.0.1 - - [11/Jan/2025 21:51:56] "[33mGET /socket.io/?EIO=4&transport=polling&t=0rcka55n HTTP/1.1[0m" 404 -
+2025-01-11 21:51:57,138 - werkzeug - INFO -  * Detected change in 'C:\\Users\\ssurk\\Documents\\Coding Project\\Delta2\\backend\\functions\\parsing.py', reloading
+2025-01-11 21:51:57,202 - werkzeug - INFO -  * Restarting with stat
+2025-01-11 21:51:57,737 - __main__ - INFO - Starting Flask application...
+2025-01-11 21:51:57,760 - werkzeug - WARNING -  * Debugger is active!
+2025-01-11 21:51:57,766 - werkzeug - INFO -  * Debugger PIN: 598-188-256
+2025-01-11 21:52:03,204 - werkzeug - INFO - 127.0.0.1 - - [11/Jan/2025 21:52:03] "[33mGET /socket.io/?EIO=4&transport=polling&t=0rh70qbr HTTP/1.1[0m" 404 -
+2025-01-11 21:52:08,899 - werkzeug - INFO - 127.0.0.1 - - [11/Jan/2025 21:52:08] "[33mGET /socket.io/?EIO=4&transport=polling&t=0rltrobh HTTP/1.1[0m" 404 -
